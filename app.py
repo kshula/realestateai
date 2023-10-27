@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-from PIL import Image
+
 
 
 
@@ -10,9 +10,6 @@ st.title('Real estate AI assistant')
 st.markdown('The purpose of this app is to summarise and analyse real estate data of plots in Zambia')
 st.divider()  # 👈 Draws a horizontal rule
 
-image = Image.open('real.jpg')
-
-st.image(image, caption='AI in Real Estate')
 
 DATA_URL = ('area.xlsx')
 # Create a text element and let the reader know the data is loading.
