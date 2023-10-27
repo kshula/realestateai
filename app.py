@@ -1,6 +1,11 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from PIL import Image
+
+image = Image.open('real.jpg')
+
+st.image(image, caption='Real estate AI')
 
 
 st.title('Real estate AI assistant')
