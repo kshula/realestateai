@@ -11,13 +11,13 @@ st.markdown('The purpose of this app is to summarise and analyse real estate dat
 st.divider()  # 👈 Draws a horizontal rule
 
 
-DATA_URL = ('area.xlsx')
+DATA_URL = ('area.csv')
 # Create a text element and let the reader know the data is loading.
 
 menu = st.sidebar.radio("Menu",['Home', 'Analysis'])
 @st.cache_data
 def load_data(nrows):
-    data = pd.read_excel(DATA_URL)
+    data = pd.read_csv(DATA_URL)
     data.round(2)
     return data
 
