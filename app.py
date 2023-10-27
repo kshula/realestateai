@@ -1,9 +1,6 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import plotly.express as px
-
-
 
 
 st.title('Real estate AI assistant')
@@ -17,7 +14,7 @@ DATA_URL = ('area.csv')
 menu = st.sidebar.radio("Menu",['Home', 'Analysis'])
 @st.cache_data
 def load_data(nrows):
-    data = pd.read_csv(DATA_URL)
+    data = pd.read_csv(DATA_URL, encoding='ANSI')
     return data
 
 
@@ -68,4 +65,3 @@ else:
     st.text('With a median of K65,000 price for plots listed around the country.')
     st.text('The mean price of 600SQM, (20*30) is ZMW 113K')
     st.divider()  # 👈 Draws a horizontal rule
-
