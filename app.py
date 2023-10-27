@@ -18,7 +18,6 @@ menu = st.sidebar.radio("Menu",['Home', 'Analysis'])
 @st.cache_data
 def load_data(nrows):
     data = pd.read_csv(DATA_URL)
-    data.round(2)
     return data
 
 
