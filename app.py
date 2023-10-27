@@ -14,7 +14,7 @@ DATA_URL = ('area.csv')
 menu = st.sidebar.radio("Menu",['Home', 'Analysis'])
 @st.cache_data
 def load_data(nrows):
-    data = pd.read_csv(DATA_URL, encoding='ANSI')
+    data = pd.read_csv(DATA_URL,  encoding='windows-1252')
     return data
 
 
